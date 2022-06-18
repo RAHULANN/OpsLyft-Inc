@@ -1,0 +1,10 @@
+#navmaindiv{
+    display: flex;
+    gap:100px;
+    justify-content: space-around;
+}
+
+#globel{
+    display: flex;
+    justify-content: space-around;
+}
