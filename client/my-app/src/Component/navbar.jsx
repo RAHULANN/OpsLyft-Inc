@@ -14,10 +14,15 @@ const serchfun=()=>{
     let filldata=apidata.Countries.filter((e)=>{let d=e.Country.toLowerCase()
      let f=indata.toLowerCase()
      if(d==f){
-        return e.Country
+        let Countries={
+            Country:e.Country
+        }
+       
+        return Countries
      }
      
     })
+    console.log(filldata)
     if(filldata.length>0){
         dispatch(Filapidata(filldata))
      }
@@ -52,13 +57,13 @@ if(loading===false&&error===false){
             </select>
 
            </div>
+           
+           <div> <input type="text"  onChange={(e)=>{setIndata(e.target.value)}} />
+           <button onClick={()=>{serchfun()}}>serch</button></div>
+           <div></div>
            <div>
             user login
            </div>
-           <div> <input type="text"  onChange={(e)=>{setIndata(e.target.value)}} />
-           <button >serch</button></div>
-           <div></div>
-
         </div>
 
 
